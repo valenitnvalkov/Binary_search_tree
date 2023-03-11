@@ -1,3 +1,5 @@
+// Given a binary search tree and two integers t1 and t2. To find all vertices X of the tree with keys located in the interval [t1, t2]
+
 #include<stdio.h>
 #include<stdlib.h>
  
