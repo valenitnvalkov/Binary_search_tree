@@ -1,5 +1,3 @@
-// Given a binary search tree and two integers t1 and t2. To find all vertices X of the tree with keys located in the interval [t1, t2]
-
 #include<stdio.h>
 #include<stdlib.h>
  
@@ -56,12 +54,11 @@ void find_range (struct tree *root, int t1, int t2) // Min O(1), Max O(N), Avera
   find_range(root->right, t1, t2);
 }
  
-void enter_elements_of_treee (struct tree ** p, int x)  // min O(N), max O(N) N брой вмъквания на елементи от потребителя
+void enter_elements_of_treee (struct tree ** p, int x)  // min O(N), max O(N)
 {
 	int right, left;
 	struct tree *q1, *q2;
 
-  // създава корена, ако няма такъв до момента
 	if (*p == NULL)  
 	{
 		printf("Enter a root: ");
@@ -71,17 +68,14 @@ void enter_elements_of_treee (struct tree ** p, int x)  // min O(N), max O(N) N 
 		(*p)->key = x;
 	}	
 
-  // въвежда ляв наследник на текущия връх
 
 	printf("Enter the left heir of %d: ", x);
 	scanf("%d", &left);
 	
-  // въвежда десен наследник на текущия връх
 
 	printf("Enter the right heir of %d: ", x);
 	scanf("%d", &right);
 
-// създава ляв наследник на текущия връх, ако стойността, въведена за него е различна от ‘0’
 	if (left != 0)
 	{
 		q1 = (struct tree *)malloc(sizeof(struct tree));
@@ -93,7 +87,6 @@ void enter_elements_of_treee (struct tree ** p, int x)  // min O(N), max O(N) N 
 	else
 		(*p)->left = NULL;
 
-// създава десен наследник на текущия връх, ако стойността, въведена за него е различна от ‘0’
 	if (right != 0)
 	{
 		q2 = (struct tree *)malloc(sizeof(struct tree));
@@ -106,7 +99,7 @@ void enter_elements_of_treee (struct tree ** p, int x)  // min O(N), max O(N) N 
 		(*p)->right = NULL;
 }
 
-void print_tree (struct tree *root, int space) // min 0(1), max O(N * space ), N - брой членове 
+void print_tree (struct tree *root, int space) // min 0(1), max O(N * space )
 {
   if (root == NULL) 
     return;
