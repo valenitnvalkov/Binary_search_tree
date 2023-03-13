@@ -1,6 +1,3 @@
-/*To define data structures that describe the commercial objects of a store (name, bulstat, address), and the sales data are: product, quantity, price. 
-5 products are stored for each company. To write a function that prints the data for a company on Company ID.*/
-
 #include <stdio.h>
 
 typedef struct
